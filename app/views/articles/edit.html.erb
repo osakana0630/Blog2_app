@@ -1,0 +1,28 @@
+<div class="container">
+
+  <h1 class="text-center mt-5">編集</h1>
+
+  <%= form_for(@article) do |f| %>
+
+    <div class="form-group my-5">
+      <%= f.label :title, 'タイトル' %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group my-5">
+      <%= f.label :body, '本文' %>
+      <%= f.text_area :body, rows: 15, class: 'form-control' %>
+    </div>
+
+    <div class="form-group my-5">
+      <%= f.label :image, '画像' %>
+      <%= f.file_field :image %>
+    </div>
+
+
+    <%= f.submit nil, class: "btn btn-primary"%>
+    <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "削除しますか？"}, class: "btn btn-danger"%>
+
+  <% end %>
+
+</div>

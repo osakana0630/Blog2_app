@@ -1,0 +1,46 @@
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <% @article.each do |article| %>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <%= link_to article do %>
+            <h2 class="post-title">
+              <%= article.title %>
+            </h2>
+            <!--          <h3 class="post-subtitle"> -->
+            <%#= aritcle %>
+            <!--          </h3>-->
+          <% end %>
+          <p class="post-meta">投稿者
+            <a href="#"><%= "??" %></a>
+            <%= article.created_at.strftime("%Y年%m月%d日 %H時%M分") %></p>
+        </div>
+        <hr>
+
+      </div>
+      <hr>
+    </div>
+  <% end %>
+</div>
+<!-- Pager -->
+<div class="clearfix mr-5">
+  <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+</div>
+
+<hr>
