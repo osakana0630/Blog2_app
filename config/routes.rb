@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   root "articles#index"
   resources :articles
+
+  devise_for :users, :controllers => {
+      :registrations => 'users/registrations'
+  }
 
 
 

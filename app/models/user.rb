@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   #ユーザーのデータを消したときに紐づいたprofileも消してくれる
   has_one :profile, dependent: :destroy
+  has_many :articles, dependent: :destroy
+  delegate :name, to: :profile, allow_nil: true
+
 end

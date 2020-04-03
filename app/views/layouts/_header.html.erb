@@ -3,7 +3,7 @@
   <div class="container">
     <a class="navbar-brand" style="padding: 15px 20px" href="/">
       <% if user_signed_in? %>
-        <%= "#{current_user.profile.name}のブログ" %>
+        <%= "#{current_user.name}のブログ" %>
       <% else %>
         ブログサービス
       <% end %>
@@ -21,13 +21,13 @@
             <a class="nav-link" href="http://localhost:3000/articles/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://blackrockdigital.github.io/startbootstrap-clean-blog/about.html">About</a>
+            <a class="nav-link" href="/">About</a>
           </li>
           <li class="nav-item">
             <%= link_to "New Post", new_article_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://blackrockdigital.github.io/startbootstrap-clean-blog/contact.html">Contact</a>
+            <a class="nav-link" href="/">Contact</a>
           </li>
 
           <li class="nav-item">

@@ -23,13 +23,16 @@
             <h2 class="post-title">
               <%= article.title %>
             </h2>
-            <!--          <h3 class="post-subtitle"> -->
-            <%#= aritcle %>
-            <!--          </h3>-->
           <% end %>
-          <p class="post-meta">投稿者
-            <a href="#"><%= "??" %></a>
-            <%= article.created_at.strftime("%Y年%m月%d日 %H時%M分") %></p>
+
+          <p class="post-meta mt-5 mb-0">投稿者
+            <a href="#"><%= article.user.profile.name%></a>
+
+              <%#= l article.updated_at  %>
+
+           <p class="post-meta">投稿日 <%= l article.created_at, format: :long %></p>
+<!--          <p class="post-meta">更新日 <%#= l article.updated_at, format: :long %></p>-->
+
         </div>
         <hr>
 
