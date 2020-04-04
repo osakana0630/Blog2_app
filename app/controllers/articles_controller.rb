@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
 
   #ログインしていないとアクションを実行できない
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
+
+
   #記事の投稿者以外の人が編集、更新、削除できないようにフィルタリング
   before_action :validate_user, only:[:update, :destroy, :edit]
   #アクションの共通部分を共通化

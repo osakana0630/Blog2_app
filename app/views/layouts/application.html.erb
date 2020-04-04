@@ -26,18 +26,18 @@
 <%= render "layouts/header" %>
 
 
-<body style="margin-top: 60px">
+<body style="margin-top: 33px">
 <%# if flash[:notice].present? %>
 <!--  <p class="alert alert-success text-center"><%#= flash[:notice]%></p>-->
 <%# end %>
 
 <% if flash[:notice] %>
-    <div class="alert alert-success">
+    <div class="alert alert-success text-center", style="margin-bottom: 0px">
       <%= flash[:notice] %>
     </div>
 <% end %>
 <% if flash[:alert] %>
-    <div class="alert alert-danger">
+    <div class="alert alert-danger text-center">
       <%= flash[:alert] %>
     </div>
 <% end %>

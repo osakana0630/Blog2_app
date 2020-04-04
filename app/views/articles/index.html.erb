@@ -5,8 +5,13 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
+
           <h1>Clean Blog</h1>
-          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+
+          <% if user_signed_in? %>
+           <span class="subheading"><%= "by  #{current_user.name}" %></span>
+            <% end %>
+
         </div>
       </div>
     </div>
@@ -26,7 +31,7 @@
           <% end %>
 
           <p class="post-meta mt-5 mb-0">投稿者
-            <a href="#"><%= article.user.profile.name%></a>
+            <a href="#"><%= article.user.name%></a>
 
               <%#= l article.updated_at  %>
 
